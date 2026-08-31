@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Sleeper Fantasy Aid (test harness)</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>🏈 Sleeper Fantasy Aid</h1>
+    <div class="controls">
+      <input id="username-input" type="text" placeholder="Sleeper username" value="Tej" />
+      <button id="load-user-btn">Load</button>
+      <select id="league-select" disabled>
+        <option>No leagues loaded</option>
+      </select>
+      <select id="week-select" disabled>
+        <option>Week</option>
+      </select>
+    </div>
+  </header>
+  <div id="status-line"></div>
+
+  <nav class="tabs">
+    <button data-tab="dashboard" class="active">Dashboard</button>
+    <button data-tab="optimizer">Lineup Optimizer</button>
+    <button data-tab="waivers">Waiver Wire</button>
+    <button data-tab="trades">Trade Analyzer</button>
+  </nav>
+
+  <main>
+    <section id="panel-dashboard" class="panel active"></section>
+    <section id="panel-optimizer" class="panel"></section>
+    <section id="panel-waivers" class="panel"></section>
+    <section id="panel-trades" class="panel"></section>
+  </main>
+
+  <script src="fixtures.js"></script>
+  <script src="mock-fetch.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/scoring.js"></script>
+  <script src="../js/state.js"></script>
+  <script src="../js/dashboard.js"></script>
+  <script src="../js/optimizer.js"></script>
+  <script src="../js/waivers.js"></script>
+  <script src="../js/trades.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

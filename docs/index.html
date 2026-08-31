@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sleeper Fantasy Aid</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>🏈 Sleeper Fantasy Aid</h1>
+    <div class="controls">
+      <input id="username-input" type="text" placeholder="Sleeper username" value="Tej" />
+      <button id="load-user-btn">Load</button>
+      <select id="league-select" disabled>
+        <option>No leagues loaded</option>
+      </select>
+      <select id="week-select" disabled>
+        <option>Week</option>
+      </select>
+    </div>
+  </header>
+  <div id="status-line"></div>
+
+  <nav class="tabs">
+    <button data-tab="dashboard" class="active">Dashboard</button>
+    <button data-tab="optimizer">Lineup Optimizer</button>
+    <button data-tab="waivers">Waiver Wire</button>
+    <button data-tab="trades">Trade Analyzer</button>
+  </nav>
+
+  <main>
+    <section id="panel-dashboard" class="panel active">
+      <div class="empty-state">Load your username and pick a league to see your dashboard.</div>
+    </section>
+
+    <section id="panel-optimizer" class="panel">
+      <div class="empty-state">Load a league first.</div>
+    </section>
+
+    <section id="panel-waivers" class="panel">
+      <div class="empty-state">Load a league first.</div>
+    </section>
+
+    <section id="panel-trades" class="panel">
+      <div class="empty-state">Load a league first.</div>
+    </section>
+  </main>
+
+  <footer>
+    Data from the public Sleeper API (api.sleeper.app). Projections/values are best-effort estimates, not guarantees. For personal use only.
+  </footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/scoring.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/optimizer.js"></script>
+  <script src="js/waivers.js"></script>
+  <script src="js/trades.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
