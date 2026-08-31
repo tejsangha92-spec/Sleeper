@@ -22,24 +22,28 @@ estimate is a fallback.
 
 ## Running it
 
-No build step or install required — it's plain HTML/CSS/JS.
+**Hosted:** once GitHub Pages is enabled for this repo (Settings → Pages → Source: Deploy from
+branch → Branch: `main`, folder: `/docs`), the app is available at
+`https://tejsangha92-spec.github.io/Sleeper/` — just open that link, no setup needed.
+
+**Locally:** no build step or install required — it's plain HTML/CSS/JS.
 
 ```
-cd web
+cd docs
 python3 -m http.server 8000
 ```
 
 Then open `http://localhost:8000` in your browser. On load, enter your Sleeper username, pick
 which of your leagues to work with, and pick a week.
 
-(Opening `web/index.html` directly by double-clicking may not work in every browser, since some
+(Opening `docs/index.html` directly by double-clicking may not work in every browser, since some
 browsers restrict `fetch()` from `file://` pages — serving it locally as above avoids that.)
 
 ## Testing
 
-`web/test/test.html` is an offline test harness that mocks Sleeper's API with fixture data
-(`web/test/fixtures.js`) so the optimizer/waiver/trade math can be checked without hitting the
-real API. Serve the `web` directory and open `test/test.html` to run it.
+`docs/test/test.html` is an offline test harness that mocks Sleeper's API with fixture data
+(`docs/test/fixtures.js`) so the optimizer/waiver/trade math can be checked without hitting the
+real API. Serve the `docs` directory and open `test/test.html` to run it.
 
 ## Notes
 
